@@ -13,10 +13,10 @@ import { Analytics } from '@vercel/analytics/react';
 
 import { Header } from '~/components/header';
 
-import radixWhiteA from '@radix-ui/colors/whiteA.css';
-import radixBlackA from '@radix-ui/colors/blackA.css';
-import radixMauve from '@radix-ui/colors/mauveDark.css';
-import radixViolet from '@radix-ui/colors/violetDark.css';
+import radixWhiteA from '@radix-ui/colors/white-alpha.css';
+import radixBlackA from '@radix-ui/colors/black-alpha.css';
+import radixMauve from '@radix-ui/colors/mauve-dark.css';
+import radixViolet from '@radix-ui/colors/violet-dark.css';
 import rootStyles from '~/styles/root.css';
 import headerStyles from '~/styles/header.css';
 import footerStyles from '~/styles/footer.css';
