@@ -172,7 +172,7 @@
 .DropdownMenuRadioItem[data-highlighted],
 .DropdownMenuSubTrigger[data-highlighted] {
 	background-color: var(--violet9);
-	color: var(--whiteA12);
+	color: var(--white-a12);
 }
 
 .DropdownMenuLabel {
@@ -212,16 +212,16 @@
 	align-items: center;
 	justify-content: center;
 	color: var(--white11);
-	background-color: var(--whiteA4);
+	background-color: var(--white-a4);
 	position: absolute;
 	right: 23px;
-	border-left: solid 1px var(--whiteA8);
+	border-left: solid 1px var(--white-a8);
 	border-top-right-radius: 4px;
 	border-bottom-right-radius: 4px;
 	cursor: pointer;
 }
 .IconButton:hover {
-	background-color: var(--whiteA8);
+	background-color: var(--white-a8);
 }
 
 .Button {
@@ -238,12 +238,12 @@
 
 	background-color: var(--violet8);
 	color: white;
-	box-shadow: 0 0 1px var(--whiteA9);
+	box-shadow: 0 0 1px var(--white-a9);
 }
 
 .Button:hover {
 	background-color: var(--violet10);
-	box-shadow: 0 0 4px var(--whiteA9);
+	box-shadow: 0 0 4px var(--white-a9);
 }
 
 .boot-up {
@@ -388,7 +388,7 @@
 .SelectItem[data-highlighted] {
 	outline: none;
 	background-color: var(--violet10);
-	color: var(--whiteA12);
+	color: var(--white-a12);
 }
 
 .SelectLabel {
@@ -437,8 +437,8 @@
 	font-size: 15px;
 	line-height: 1;
 	color: white;
-	background-color: var(--whiteA5);
-	box-shadow: 0 0 0 1px var(--whiteA9);
+	background-color: var(--white-a5);
+	box-shadow: 0 0 0 1px var(--white-a9);
 	overflow: hidden;
 	display: flex;
 	align-items: center;
@@ -447,7 +447,7 @@
 
 .Input:-webkit-autofill {
 	-webkit-box-shadow: 0 0 0 30px rgb(22, 22, 39) inset,
-		0 0 0 1px var(--whiteA9) !important;
+		0 0 0 1px var(--white-a9) !important;
 	-webkit-text-fill-color: white !important;
 	caret-color: white;
 	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
@@ -492,10 +492,10 @@ label.Input {
 .NavigationMenuList {
 	display: flex;
 	justify-content: center;
-	background-color: var(--whiteA5);
+	background-color: var(--white-a5);
 	border-radius: 6px;
 	list-style: none;
-	box-shadow: 0 0 0 1px var(--whiteA9);
+	box-shadow: 0 0 0 1px var(--white-a9);
 	padding: 0 2px;
 	margin: 0;
 }
@@ -512,7 +512,7 @@ label.Input {
 	line-height: 1;
 	border-radius: 4px;
 	font-size: 15px;
-	color: var(--whiteA12);
+	color: var(--white-a12);
 	display: block;
 	text-decoration: none;
 	font-size: 15px;

@@ -71,7 +71,7 @@ form,
 }
 
 .footer {
-	box-shadow: 0 0 0 1px var(--whiteA9);
+	box-shadow: 0 0 0 1px var(--white-a9);
 }
 
 .error .stderr {
