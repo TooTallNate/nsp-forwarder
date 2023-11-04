@@ -146,7 +146,7 @@
 .DropdownMenuSubTrigger {
 	font-size: 12px;
 	line-height: 1;
-	color: var(--violet10);
+	color: var(--violet-10);
 	border-radius: 3px;
 	display: flex;
 	align-items: center;
@@ -157,21 +157,21 @@
 	outline: none;
 }
 .DropdownMenuSubTrigger[data-state='open'] {
-	background-color: var(--violet4);
-	color: var(--violet11);
+	background-color: var(--violet-4);
+	color: var(--violet-11);
 }
 .DropdownMenuItem[data-disabled],
 .DropdownMenuCheckboxItem[data-disabled],
 .DropdownMenuRadioItem[data-disabled],
 .DropdownMenuSubTrigger[data-disabled] {
-	color: var(--mauve8);
+	color: var(--mauve-8);
 	pointer-events: none;
 }
 .DropdownMenuItem[data-highlighted],
 .DropdownMenuCheckboxItem[data-highlighted],
 .DropdownMenuRadioItem[data-highlighted],
 .DropdownMenuSubTrigger[data-highlighted] {
-	background-color: var(--violet9);
+	background-color: var(--violet-9);
 	color: var(--white-a12);
 }
 
@@ -181,13 +181,13 @@
 	padding-bottom: 2px;
 	font-size: 11px;
 	line-height: 14px;
-	color: var(--mauve11);
+	color: var(--mauve-11);
 	user-select: none;
 }
 
 .DropdownMenuSeparator {
 	height: 1px;
-	background-color: var(--violet9);
+	background-color: var(--violet-9);
 	margin: 5px;
 	opacity: 0.3;
 }
@@ -236,13 +236,13 @@
 	cursor: pointer;
 	transition: box-shadow 0.3s, color 0.3s, background-color 0.3s;
 
-	background-color: var(--violet8);
+	background-color: var(--violet-8);
 	color: white;
 	box-shadow: 0 0 1px var(--white-a9);
 }
 
 .Button:hover {
-	background-color: var(--violet10);
+	background-color: var(--violet-10);
 	box-shadow: 0 0 4px var(--white-a9);
 }
 
@@ -275,7 +275,7 @@
 }
 
 .SliderTrack {
-	background-color: var(--blackA5);
+	background-color: var(--black-a5);
 	position: relative;
 	flex-grow: 1;
 	border-radius: 9999px;
@@ -284,7 +284,7 @@
 
 .SliderRange {
 	position: absolute;
-	background-color: var(--blackA10);
+	background-color: var(--black-a10);
 	border-radius: 9999px;
 	height: 100%;
 }
@@ -294,15 +294,15 @@
 	width: 20px;
 	height: 20px;
 	background-color: white;
-	box-shadow: 0 2px 10px var(--blackA7);
+	box-shadow: 0 2px 10px var(--black-a7);
 	border-radius: 10px;
 }
 .SliderThumb:hover {
-	background-color: var(--violet3);
+	background-color: var(--violet-3);
 }
 .SliderThumb:focus {
 	outline: none;
-	box-shadow: 0 0 0 5px var(--blackA8);
+	box-shadow: 0 0 0 5px var(--black-a8);
 }
 
 .CheckboxRoot {
@@ -315,11 +315,11 @@
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	box-shadow: 0 2px 10px var(--blackA7);
+	box-shadow: 0 2px 10px var(--black-a7);
 }
 
 .CheckboxIndicator {
-	color: var(--blackA12);
+	color: var(--black-a12);
 	line-height: 0;
 }
 
@@ -340,21 +340,21 @@
 	line-height: 1;
 	gap: 5px;
 	background-color: white;
-	color: var(--violet10);
-	box-shadow: 0 2px 10px var(--blackA7);
+	color: var(--violet-10);
+	box-shadow: 0 2px 10px var(--black-a7);
 }
 .SelectTrigger:hover {
-	background-color: var(--mauve9);
+	background-color: var(--mauve-9);
 }
 .SelectTrigger:focus {
 	box-shadow: 0 0 0 2px black;
 }
 .SelectTrigger[data-placeholder] {
-	color: var(--violet9);
+	color: var(--violet-9);
 }
 
 .SelectIcon {
-	color: Var(--violet11);
+	color: Var(--violet-11);
 }
 
 .SelectContent {
@@ -372,7 +372,7 @@
 .SelectItem {
 	font-size: 13px;
 	line-height: 1;
-	color: var(--violet10);
+	color: var(--violet-10);
 	border-radius: 3px;
 	display: flex;
 	align-items: center;
@@ -382,12 +382,12 @@
 	user-select: none;
 }
 .SelectItem[data-disabled] {
-	color: var(--mauve8);
+	color: var(--mauve-8);
 	pointer-events: none;
 }
 .SelectItem[data-highlighted] {
 	outline: none;
-	background-color: var(--violet10);
+	background-color: var(--violet-10);
 	color: var(--white-a12);
 }
 
@@ -395,13 +395,13 @@
 	padding: 0 25px;
 	font-size: 12px;
 	line-height: 25px;
-	color: var(--mauve11);
+	color: var(--mauve-11);
 	user-select: none;
 }
 
 .SelectSeparator {
 	height: 1px;
-	background-color: var(--violet6);
+	background-color: var(--violet-6);
 	margin: 5px;
 }
 
@@ -420,7 +420,7 @@
 	justify-content: center;
 	height: 25px;
 	background-color: white;
-	color: var(--violet11);
+	color: var(--violet-11);
 	cursor: default;
 }
 
@@ -437,8 +437,8 @@
 	font-size: 15px;
 	line-height: 1;
 	color: white;
-	background-color: var(--white-a5);
-	box-shadow: 0 0 0 1px var(--white-a9);
+	background-color: var(--white-a2);
+	box-shadow: 0 0 0 1px var(--white-a6);
 	overflow: hidden;
 	display: flex;
 	align-items: center;
@@ -492,7 +492,7 @@ label.Input {
 .NavigationMenuList {
 	display: flex;
 	justify-content: center;
-	background-color: var(--white-a5);
+	background-color: var(--white-a2);
 	border-radius: 6px;
 	list-style: none;
 	box-shadow: 0 0 0 1px var(--white-a9);
@@ -520,10 +520,10 @@ label.Input {
 	transition: background-color 0.3s;
 }
 .NavigationMenuLink.active {
-	background-color: var(--violet8);
+	background-color: var(--violet-8);
 }
 .NavigationMenuLink:hover {
-	background-color: var(--violet10);
+	background-color: var(--violet-10);
 }
 
 .NavigationMenuList a:hover {
