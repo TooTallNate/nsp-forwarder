@@ -25,13 +25,21 @@ import { GitHubLogoIcon } from '@radix-ui/react-icons';
 
 export const config = { runtime: 'edge' };
 
-export const meta: MetaFunction = () => ({
-	charset: 'utf-8',
-	title: 'NSP Forwarder Generator',
-	description:
-		'Create "NRO to NSP forwarders" for your modded Nintendo Switch.',
-	viewport: 'width=device-width,initial-scale=1',
-});
+export const meta: MetaFunction = () => {
+	return [
+		{ charset: 'utf-8' },
+		{ title: 'NSP Forwarder Generator' },
+		{
+			name: 'description',
+			content:
+				'Create "NRO to NSP forwarders" for your modded Nintendo Switch.',
+		},
+		{
+			name: 'viewport',
+			content: 'width=device-width,initial-scale=1',
+		},
+	];
+};
 
 export const links: LinksFunction = () => {
 	return [
