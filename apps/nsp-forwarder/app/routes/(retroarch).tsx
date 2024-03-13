@@ -1,7 +1,8 @@
+import clsx from 'clsx';
 import va from '@vercel/analytics';
 import { Form, useLocation } from '@remix-run/react';
 import { useRef, useState } from 'react';
-import { HeadersFunction, LinksFunction } from '@vercel/remix';
+import { LinksFunction } from '@vercel/remix';
 
 import { Input } from '~/components/input';
 import { ImageInput } from '~/components/image-input';
@@ -17,15 +18,7 @@ import * as Checkbox from '@radix-ui/react-checkbox';
 import { CheckIcon } from '@radix-ui/react-icons';
 import { generateNsp } from '~/lib/generate.client';
 import { generateRandomID } from '~/lib/generate-id';
-import clsx from 'clsx';
 import { extractNACP } from '@tootallnate/nro';
-
-export const headers: HeadersFunction = () => {
-	return {
-		'Cache-Control':
-			'max-age: 600, s-maxage=3600, stale-while-revalidate=10',
-	};
-};
 
 export const links: LinksFunction = () => {
 	return [
