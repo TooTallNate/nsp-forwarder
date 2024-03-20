@@ -1,0 +1,28 @@
+import { join } from 'node:path';
+import { fileURLToPath } from 'node:url';
+import { initRemix } from 'remix-electron';
+import { app, BrowserWindow } from 'electron';
+
+/** @type {BrowserWindow | undefined} */
+let win;
+
+app.on('ready', async () => {
+	try {
+		const url = await initRemix({
+			serverBuild: join(
+				fileURLToPath(import.meta.url),
+				'../../build/server/edge-eyJydW50aW1lIjoiZWRnZSJ9/index.js'
+			),
+			publicFolder: join(
+				fileURLToPath(import.meta.url),
+				'../../build/client'
+			),
+		});
+
+		win = new BrowserWindow({ show: false });
+		await win.loadURL(url);
+		win.show();
+	} catch (error) {
+		console.error(error);
+	}
+});

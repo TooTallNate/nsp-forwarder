@@ -1,6 +1,6 @@
-import va from '@vercel/analytics';
+//import va from '@vercel/analytics';
 import { Form, useLocation } from '@remix-run/react';
-import { useRef, useState } from 'react';
+import { useLayoutEffect, useRef, useState } from 'react';
 import { HeadersFunction, LinksFunction } from '@vercel/remix';
 
 import { Input } from '~/components/input';
@@ -19,6 +19,10 @@ import { generateNsp } from '~/lib/generate.client';
 import { generateRandomID } from '~/lib/generate-id';
 import clsx from 'clsx';
 import { extractNACP } from '@tootallnate/nro';
+
+declare const electronAPI: {
+	setSize(size: { width: number; height: number }): void;
+};
 
 export const headers: HeadersFunction = () => {
 	return {
@@ -62,6 +66,21 @@ export default function Index() {
 	const imageBlobRef = useRef<Blob | null>(null);
 	const logoBlobRef = useRef<Blob | null>(null);
 	const startupMovieBlobRef = useRef<Blob | null>(null);
+
+	useLayoutEffect(() => {
+		if (typeof electronAPI === 'undefined') return;
+		//console.log(document.body.offsetHeight);
+		let height = 0;
+		for (const el of [...document.body.childNodes].slice(2)) {
+			if ('offsetHeight' in el && typeof el.offsetHeight === 'number') {
+				height += el.offsetHeight;
+			}
+		}
+		electronAPI.setSize({
+			width: document.body.offsetWidth,
+			height,
+		});
+	}, [advancedMode, isRetroarch]);
 
 	const handleSubmit: React.FormEventHandler<HTMLFormElement> = async (e) => {
 		e.preventDefault();
@@ -123,18 +142,18 @@ export default function Index() {
 				? Number(logoTypeVal)
 				: undefined;
 
-		va.track('Generate', {
-			isRetroarch,
-			title,
-			publisher,
-			nroPath,
-			romPath: romPath ?? null,
-			version: version ?? null,
-			startupUserAccount: startupUserAccount ?? null,
-			screenshot: screenshot ?? null,
-			videoCapture: videoCapture ?? null,
-			logoType: logoType ?? null,
-		});
+		//va.track('Generate', {
+		//	isRetroarch,
+		//	title,
+		//	publisher,
+		//	nroPath,
+		//	romPath: romPath ?? null,
+		//	version: version ?? null,
+		//	startupUserAccount: startupUserAccount ?? null,
+		//	screenshot: screenshot ?? null,
+		//	videoCapture: videoCapture ?? null,
+		//	logoType: logoType ?? null,
+		//});
 
 		const nsp = await generateNsp({
 			id,

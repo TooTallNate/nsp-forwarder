@@ -8,7 +8,6 @@ import {
 	ScrollRestoration,
 	useLocation,
 } from '@remix-run/react';
-import { Analytics } from '@vercel/analytics/react';
 
 import { Header } from '~/components/header';
 
@@ -92,7 +91,6 @@ export default function App() {
 				</div>
 				<ScrollRestoration />
 				<Scripts />
-				<Analytics />
 			</body>
 		</html>
 	);
