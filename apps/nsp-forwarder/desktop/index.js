@@ -6,7 +6,7 @@ import * as build from "../build/server/index.js";
 function handleSetSize(event, size) {
 	const webContents = event.sender
 	const win = BrowserWindow.fromWebContents(webContents)
-	win.setSize(win.getSize()[0], size.height + 65);
+	win.setSize(win.getSize()[0], size.height + 80);
 	win.center();
 	win.show();
 }
@@ -40,7 +40,6 @@ app.whenReady().then(async () => {
 	});
 
 	const win = new BrowserWindow({
-		title: 'NSP Forwarder',
 		show: false,
 		autoHideMenuBar: true,
 		webPreferences: {
