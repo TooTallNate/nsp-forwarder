@@ -1,4 +1,4 @@
-import { fileURLToPath } from 'url';
+import { fileURLToPath } from 'node:url';
 import { app, net, protocol, ipcMain, BrowserWindow } from 'electron';
 import { createRequestHandler } from "@remix-run/server-runtime";
 import * as build from "../build/server/index.js";
@@ -6,7 +6,7 @@ import * as build from "../build/server/index.js";
 function handleSetSize(event, size) {
 	const webContents = event.sender
 	const win = BrowserWindow.fromWebContents(webContents)
-	win.setSize(size.width, size.height + 65);
+	win.setSize(win.getSize()[0], size.height + 65);
 	win.center();
 	win.show();
 }
@@ -42,6 +42,7 @@ app.whenReady().then(async () => {
 	const win = new BrowserWindow({
 		title: 'NSP Forwarder',
 		show: false,
+		autoHideMenuBar: true,
 		webPreferences: {
 			preload: fileURLToPath(new URL('./preload.js', import.meta.url)),
 		},

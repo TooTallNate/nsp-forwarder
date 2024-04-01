@@ -1,7 +1,7 @@
 //import va from '@vercel/analytics';
 import { Form, useLocation } from '@remix-run/react';
 import { useLayoutEffect, useRef, useState } from 'react';
-import { HeadersFunction, LinksFunction } from '@vercel/remix';
+import type { HeadersFunction, LinksFunction } from '@vercel/remix';
 
 import { Input } from '~/components/input';
 import { ImageInput } from '~/components/image-input';
